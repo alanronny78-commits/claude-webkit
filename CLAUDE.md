@@ -51,6 +51,12 @@ If unsure, ask: "Would you prefer English or Spanish? / Prefieres ingles o espan
 | `animation-vocabulary` | Turns "the bouncy thing when it opens" into the real term. Useful when the user describes motion vaguely. |
 | `prototype` | Builds N genuinely different versions behind a visual picker. Manual-only — you must invoke it. |
 
+**Session housekeeping** (not part of the build flow):
+
+| Bundled Skill | Purpose |
+|---------------|---------|
+| `ahorrar-tokens` | Token saving: shows how heavy the chat is and writes the hand-off message for a new chat. Manual-only — run it when the user types `/ahorrar-tokens` or asks to save tokens, then resume the build where it was. Its automatic warnings come from `.claude/hooks/ahorro_tokens.py` (`.claude/settings.json`). |
+
 ## Skill Precedence
 
 Six bundled skills claim "design." When two disagree, this table decides. Do not average
